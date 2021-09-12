@@ -1,10 +1,12 @@
 #!/bin/bash
 
 sudo apt update -y
-sudo apt full-upgrade -y
+sudo apt upgrade -y
 sudo apt install curl -y
 sudo apt install omxplayer -y
-mkdir $HOME/playlist
+sudo apt install samba samba-common-bin -y
+
+mkdir -m 1777 $HOME/playlist
 curl https://raw.githubusercontent.com/Sachi854/play-video/main/playlist/a.mp4 -o $HOME/playlist/a.mp4
 curl https://raw.githubusercontent.com/Sachi854/play-video/main/playlist/b.mp4 -o $HOME/playlist/b.mp4
 curl https://raw.githubusercontent.com/Sachi854/play-video/main/playlist/c.mp4 -o $HOME/playlist/c.mp4
@@ -21,3 +23,9 @@ sudo chmod 644 /etc/systemd/system/play-video.service
 
 sudo systemctl daemon-reload
 sudo systemctl enable play-video.service
+
+curl https://raw.githubusercontent.com/Sachi854/play-video/main/smb.conf -o $HOME/playlist/smb.conf
+sudo mv $HOME/playlist/smb.conf /etc/samba/smb.conf
+sudo chmod 644 /etc/samba/smb.conf
+
+sudo /etc/init.d/samba restart
