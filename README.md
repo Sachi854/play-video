@@ -13,7 +13,7 @@
 OS や付属ソフトのアップデート処理も行う為かなり時間がかかる。
 
 ```bash
-curl https://raw.githubusercontent.com/Sachi854/play-video/main/init.sh | sudo bash
+curl https://raw.githubusercontent.com/Sachi854/play-video/main/init.sh | bash
 ```
 
 ![](./imgs/b.png)
