@@ -7,7 +7,8 @@ ConditionPathExists=opt/pv/bin
 ExecStart=/opt/pv/bin/play-video.sh
 Restart=no
 User=pi
+Group=pi
 Type=simple
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=graphical.target
