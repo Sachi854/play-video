@@ -25,7 +25,10 @@ sudo systemctl daemon-reload
 sudo systemctl enable play-video.service
 
 curl https://raw.githubusercontent.com/Sachi854/play-video/main/smb.conf -o $HOME/playlist/smb.conf
+sudo mkdir /etc/samba/
+sudo chmod 644 /etc/samba/
+sudo touch /etc/samba/smb.conf
 sudo mv $HOME/playlist/smb.conf /etc/samba/smb.conf
 sudo chmod 644 /etc/samba/smb.conf
 
-sudo /etc/init.d/samba restart
+sudo systemctl restart smbd
