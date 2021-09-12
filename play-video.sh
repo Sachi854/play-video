@@ -1,6 +1,6 @@
 #!/bin/sh
 setterm -cursor off
-VIDEOPATH="$HOME/playlist"
+VIDEOPATH="/home/pi/playlist"
 SERVICE="omxplayer"
 
 while true; do
