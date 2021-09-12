@@ -1,6 +1,6 @@
 #!/bin/sh
 setterm -cursor off
-VIDEOPATH="~/playlist"
+VIDEOPATH="$HOME/playlist"
 SERVICE="omxplayer"
 
 while true; do
@@ -11,7 +11,7 @@ else
         for entry in $VIDEOPATH/*
         do
                 clear
-                omxplayer --refresh --no-osd -o both $entry > /dev/null
+                omxplayer --refresh -o both $entry > /dev/null
         done
 fi
 done
