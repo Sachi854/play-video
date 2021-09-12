@@ -85,12 +85,14 @@ Windows OS の場合
 
 - [Windows 10 でネットワーク ドライブを割り当てる](https://support.microsoft.com/ja-jp/windows/windows-10-%E3%81%A7%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF-%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96%E3%82%92%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%82%8B-29ce55d1-34e3-a7e2-4801-131475f9557d)
 
+``\\raspberrypi\pi`` を指定する。
+
 Mac OS の場合
 
 - [Macを共有コンピュータおよびサーバへ接続する](https://support.apple.com/ja-jp/guide/mac-help/mchlp1140/mac)
 
-どちらもホスト名を raspberyy とし接続。
+どちらもホスト名を raspberyypi またディレクトリは pi とし接続。
 
-接続先の pi ディレクトリ直下に必要な動画ファイルを配置、もしくは削除。
+接続先のディレクトリ直下に必要な動画ファイルを配置、もしくは削除。
 
 配置後、RasPi の電源を物理的に落とし再起動。
