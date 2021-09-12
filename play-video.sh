@@ -1,9 +1,14 @@
 #!/bin/sh
 setterm -cursor off
-VIDEOPATH="/home/pi/playlist"
+VIDEOPATH="$HOME/playlist"
 SERVICE="omxplayer"
 
-trap 'exit' SIGINT
+signals() {
+  echo "exit"
+  exit
+}
+
+trap signals SIGHUP SIGINT SIGKILL SIGTERM SIGQUIT
 
 while true; do
         if ps ax | grep -v grep | grep $SERVICE > /dev/null; then

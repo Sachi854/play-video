@@ -6,6 +6,7 @@ ConditionPathExists=opt/pv/bin
 [Service]
 ExecStart=/opt/pv/bin/play-video.sh
 Restart=no
+User=pi
 Type=simple
 
 [Install]
