@@ -3,6 +3,7 @@
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt install curl -y
+sudo apt install tee -y
 sudo apt install omxplayer -y
 sudo apt install samba samba-common-bin -y
 
@@ -24,11 +25,6 @@ sudo chmod 644 /etc/systemd/system/play-video.service
 sudo systemctl daemon-reload
 sudo systemctl enable play-video.service
 
-curl https://raw.githubusercontent.com/Sachi854/play-video/main/smb.conf -o $HOME/playlist/smb.conf
-sudo mkdir /etc/samba/
-sudo chmod 644 /etc/samba/
-sudo touch /etc/samba/smb.conf
-sudo mv $HOME/playlist/smb.conf /etc/samba/smb.conf
-sudo chmod 644 /etc/samba/smb.conf
-
+sudo cp /etc/samba/smb.conf /etc/samba/smb.conf~
+curl https://raw.githubusercontent.com/Sachi854/play-video/main/smb.conf | sudo tee -a /etc/samba/smb.conf
 sudo systemctl restart smbd
