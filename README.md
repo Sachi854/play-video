@@ -1,12 +1,20 @@
 # README
 
-Raspberry Pi でフォルダ内の動画を起動時にランダムに選びループ再生するスクリプト。
+Raspberry Pi でフォルダ内の動画を起動時ランダムに選びループ再生するスクリプト。
+
+---
+
+```bash
+curl https://raw.githubusercontent.com/Sachi854/play-video/main/init.sh | bash
+```
+
+自動再生・samba のデーモンが起動。
 
 # RasPi の設定
 
 RasPi への OS インストールや初期設定は済んでいるものとする。
 
-追加の設定として、設定 -> Raspberry Pi の設定 を開く。
+追加の設定として、設定 -> Raspberry Pi の設定を開く。
 
 ![](./imgs/h.png)
 ![](./imgs/j.png)
@@ -15,7 +23,7 @@ RasPi への OS インストールや初期設定は済んでいるものとす�
 
 ![](./imgs/k.png)
 
-インターフェース設定の SSH を有効化。
+インタフェース設定の SSH を有効化。
 
 ![](./imgs/l.png)
 
@@ -77,7 +85,7 @@ curl https://raw.githubusercontent.com/Sachi854/play-video/main/init.sh | bash
 
 # 再生する動画を変更する
 
-初めに RasPi と同一のネットワーク(同じ Wifi, LANケーブルで PC に直接繋ぐ)に接続する。
+初めに RasPi と同一のネットワーク(同じ Wifi・LAN ケーブルで PC に直接繋ぐ)に接続する。
 
 次の作業は OS により異なるので以下を確認すること。
 
