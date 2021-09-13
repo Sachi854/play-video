@@ -1,6 +1,6 @@
 # README
 
-Raspberry Pi でフォルダ内の動画をループ再生するスクリプト。
+Raspberry Pi でフォルダ内の動画を起動時にランダムに選びループ再生するスクリプト。
 
 # RasPi の設定
 
@@ -48,7 +48,7 @@ curl https://raw.githubusercontent.com/Sachi854/play-video/main/init.sh | bash
 処理中に次の画面が出る。左方向キーで Yes を選択しエンターをおす。
 
 ![](./imgs/o.png)
-![](./imgs/p.png)
+![](./imgs/p.jpg)
 
 ディレクトリマークをクリック。
 
@@ -91,7 +91,7 @@ Mac OS の場合
 
 - [Macを共有コンピュータおよびサーバへ接続する](https://support.apple.com/ja-jp/guide/mac-help/mchlp1140/mac)
 
-どちらもホスト名を raspberyypi またディレクトリは pi とし接続。
+どちらもホスト名を raspberrypi またディレクトリは pi とし接続。
 
 接続先のディレクトリ直下に必要な動画ファイルを配置、もしくは削除。
 
